@@ -15,7 +15,18 @@ namespace Demo.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<Item> items = new List<Item>()
+            {
+                new Item(){
+                    Id = 1,
+                    Name = "Item 1",
+                    Description = "Descriptions",
+                    Price = 10,
+                    CreatedAt = DateTime.Now,
+                }
+            };
+            
+            return View(items);
         }
 
         public IActionResult Privacy()

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Demo.Migrations
 {
     [DbContext(typeof(AppContextDb))]
-    [Migration("20250104180557_Init-Creation")]
-    partial class InitCreation
+    [Migration("20250104182829_Initial-Creation")]
+    partial class InitialCreation
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -92,6 +92,25 @@ namespace Demo.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "b409881f-3429-4d6f-af47-92a987b242a7",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "da6df5ea-97c7-479c-b960-e724522f51d7",
+                            DisplayName = "ADMIN",
+                            Email = "admin@example.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "ADMIN@EXAMPLE.COM",
+                            NormalizedUserName = "ADMIN@EXAMPLE.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJ68PvzzurpFM7wHd1cktZQsbpn5I6G++ZI5kkGdW6+XZio+xjt/0tT71rwwOFRcCQ==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "a481a833-7eba-43a8-accb-697c0b142493",
+                            TwoFactorEnabled = false,
+                            UserName = "admin@example.com"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -119,6 +138,20 @@ namespace Demo.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "d764a80f-c1ab-4d0a-8472-1fa78e3a9c84",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = "b82bc34c-d407-4cc0-b2fe-6e313af57d89",
+                            Name = "User",
+                            NormalizedName = "USER"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

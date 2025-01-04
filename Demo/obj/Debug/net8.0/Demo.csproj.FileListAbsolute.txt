@@ -140,3 +140,4 @@ E:\Repos\Demo\Demo\obj\Debug\net8.0\refint\Demo.dll
 E:\Repos\Demo\Demo\obj\Debug\net8.0\Demo.pdb
 E:\Repos\Demo\Demo\obj\Debug\net8.0\Demo.genruntimeconfig.cache
 E:\Repos\Demo\Demo\obj\Debug\net8.0\ref\Demo.dll
+E:\Repos\Demo\Demo\obj\Debug\net8.0\Demo.sourcelink.json
